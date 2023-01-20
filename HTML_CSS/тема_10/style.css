@@ -1,0 +1,50 @@
+@font-face {
+	
+	font-family:'Unutterable';
+	src: url('Unutterable.ttf');
+}
+
+body {
+	
+	max-width: 100%;
+}
+.spacing {
+	
+	word-spacing: 10px;
+}
+
+.border_1 {
+	
+	text-decoration:underline overline green;
+	padding:0;
+	color: black;
+
+}
+
+span {
+	
+	font-family: 'Unutterable',serif;
+	font-weight: 700;
+	font-style: italic;
+	color: green;
+}
+
+.left {
+	
+	width: 50%;
+	float: left;
+	word-spacing: 10px;
+}
+
+.right {
+	
+	width: 50%;
+	float: left;
+	word-spacing: 10px;
+}
+
+.line {
+	
+	border-top: 2px solid green;
+}
+

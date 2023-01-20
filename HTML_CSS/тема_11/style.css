@@ -1,0 +1,38 @@
+body {
+	
+	font-family: Arial;
+	font-size: 20pt;
+}
+
+
+li {
+	
+	margin-bottom: 5px;
+}
+
+a {
+	
+	text-decoration: none;
+	color: darkblue;	
+}
+
+.border {
+	
+	border: 1px solid darkblue;
+	border-radius: 20px;
+	width:700px;
+	padding-left: 12px;
+}
+
+
+
+.border:hover {
+	
+	border-left-width: 10px;
+	border-color: green;
+}
+
+a:hover {
+	
+	color: green;
+}

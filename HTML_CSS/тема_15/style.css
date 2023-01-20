@@ -1,0 +1,29 @@
+.container{
+	
+	border: 5px solid red;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-wrap: nowrap;
+
+	align-content: stretch;
+}
+
+.container div {
+	
+	padding: 5px;
+	text-align: center;
+	flex: 2 1 300px;
+
+}
+
+.container div:nth-child(odd) {
+	
+	background-color: orange;
+}
+
+.container div:nth-child(even) {
+	
+	background-color: yellow;
+}

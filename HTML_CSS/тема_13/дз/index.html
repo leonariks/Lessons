@@ -1,0 +1,75 @@
+<html>
+
+	<head>
+	
+	<link href="style.css" rel="stylesheet">
+	<title>Практическая работа №10</title>
+		
+	</head>
+
+	<body>
+	
+		<div>
+		
+			<div class="columns">
+				<fieldset>
+				
+					<legend>Личная информация</legend>
+					<input type="text" placeholder="Фамилия" size="30" required title="Введите Фамилию"><br><hr>
+					<input type="text" placeholder="Имя" size="30" required title="Введите Имя"><br><hr>
+					<input type="text" placeholder="Отчество" size="30" title="Введите Отчество"><br><hr>
+					<input type="email" placeholder="Электронная почта" required title="Введите Почту"><br><hr>
+					<input type="password" placeholder="Пароль" required title="Введите Пароль"><br><hr>
+					
+					<label for="date">Дата рождения:</label>
+					<input type="date" name="date" id="date" title="Выберете Дату Рождения"><br><hr>
+					
+					<fieldset>
+						<legend>Пол</legend>
+						<input type ="radio" name="gender">Мужской
+						<input type ="radio" name="gender">Женский	
+					</fieldset>
+					
+				</fieldset>
+			</div>
+			
+			<div class="columns">
+				<fieldset>
+				
+					<legend>Регистрационные сведения</legend>
+					<label for="programm_type">Программа обучения:</label>
+						<input type="text" list="programm_type">
+							<datalist id="programm_type">
+								<option value="Группа:FSJ">Fullstack-разработка на языке Java</option>
+								<option value="Группа:FSP">Fullstack-разработка на языке Python</option>
+								<option value="Группа:FSJS">Fullstack-разработка на языке JavaScript</option>
+							</datalist>
+							<br><hr>
+							
+					<label for="type">Программа обучения:</label>	
+					<select id="type" class="type1">
+						<option>Очная</option>
+						<option>Очно-заочная</option>
+						<option>Заочная</option>
+					</select>
+					<br><hr>
+					
+					<label for="Ava">Аватар:</label>
+					<input type="file" accept="image/*">
+					<br><hr>
+					
+					<textarea placeholder="Дополнительная информация" rows="10" cols="50"></textarea>
+					
+				</fieldset>
+				<input type="checkbox" class="box"> Даю согласие на обработку данных
+			</div>
+			
+		</div>	
+		
+		<hr class="last">
+		
+		<input type="button" value="Готово">
+	
+	</body>
+
+</html>
