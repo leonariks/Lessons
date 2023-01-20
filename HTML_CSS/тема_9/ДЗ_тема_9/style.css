@@ -1,0 +1,71 @@
+body {
+
+	font-family: Arial;
+	max-width: 100%;
+}
+
+p {
+
+	color: grey;
+	font-size: 12pt;
+}
+
+h1 {
+	
+	font-style: bold;
+	font-size: 18pt;
+}
+
+h2 {
+	
+	font-size: 16pt;
+}
+
+h3 {
+	font-style: italic;
+	font-size: 14pt;
+}
+
+
+img {
+	
+	width: 80px;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+
+div {
+	
+	padding: 10px;
+	
+}
+
+hr {
+	
+	border
+}
+
+.left {
+	
+	width: 45%;
+	float: left;
+}
+
+.right {
+	
+	width: 45%;
+	float: left;
+}
+
+.rectangle {
+	
+	width : 100%;
+	border: 2px orange dashed;
+	padding: 2px;
+}
+
+.image {
+	
+	text-align: center;
+	padding:0;
+}
