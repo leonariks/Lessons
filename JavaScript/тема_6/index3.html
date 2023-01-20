@@ -1,0 +1,27 @@
+<html>
+  <head>
+
+  </head>
+
+  <body>
+
+    <script>
+
+     let n = parseInt(prompt("N = "));
+     let x = parseInt(prompt("X = "));
+     let r = 1;
+     let result;
+
+     for(let j = 1; j <= n; j++){
+      result = 1;
+      for(let i = 1; i <= j; i++){
+        result *= i;
+      }
+      r += (x**j) / result;
+     } 
+     alert("Результат = " + r); 
+  
+    </script>
+
+  </body>
+</html>

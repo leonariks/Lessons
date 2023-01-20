@@ -1,0 +1,73 @@
+<html>
+
+  <head>
+
+  </head>
+
+  <body>
+
+    <script>
+      let a = prompt("Введите число: ")
+
+      alert(a%2==0 ? 'Чётное' : 'Нечётное');
+
+      let b = prompt("Введите двухзначное число: ")
+      let first = Math.floor(b / 10);
+      let second = (b % 10);
+
+      if(first>second){
+        alert(first);
+      } else if (first<second){
+        alert(second)
+      }else {
+        alert("Одинаковые");
+      }
+
+      let t = prompt("Введите число B");
+      let r = prompt("Введите число C");
+      let result;
+
+      if(t>0 && t<=1){
+         result = r**2 - Math.sin((r**2) + t);
+      } else if(t<=0){
+         result = 0;
+      } else {
+         result = (t**2) - Math.sin((r**2) + t);
+      }
+      alert(result);
+
+      let month = prompt("Введите номер месяца: ");
+      switch (month){
+        case "1":
+        case"2":
+        case"12":
+          alert("Зима");
+        break;
+
+        case "3":
+        case "4":
+        case "5":
+          alert("Весна");
+        break;
+
+        case "6":
+        case "7":
+        case "8":
+          alert("Лето");
+        break; 
+        
+        case "9":
+        case "10":
+        case "11":
+          alert("Осень");
+        break;
+
+        default: 
+        alert("Такого месяца не существует!")
+      }
+
+    </script>
+
+  </body>
+
+</html>

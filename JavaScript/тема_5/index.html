@@ -1,0 +1,43 @@
+<html>
+
+  <head>
+
+  </head>
+
+  <body>
+
+    <script>
+
+      let a, b, c;
+      a = prompt("A = ");
+      b = prompt("B = ");
+      c = prompt("C = ");
+
+      let d = b*b - 4*a*c;
+      alert("D = " + d);
+
+      if(d>0) {
+        let x1 = (-b + Math.sqrt(d))/(2*a);
+        let x2 = (-b - Math.sqrt(d))/(2*a);
+        alert("x1 = " + x1 + " x2 = " + x2);
+      }
+      else if (d == 0) {
+        let x = -b/(2*a);
+        alert("x = " + x);
+      }
+      else
+      alert("Корней нет");
+
+     /* let x = confirm("Условие");
+      if(!x)
+      alert("Соответствует");
+      else
+      alert("Не соответствует");
+
+      alert("Text message");*/
+
+    </script>
+
+  </body>
+
+</html>

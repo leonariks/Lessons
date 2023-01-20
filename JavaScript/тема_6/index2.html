@@ -1,0 +1,43 @@
+<html>
+  <head>
+
+  </head>
+
+  <body>
+
+    <script>
+
+    /* let a = prompt("Введите значение A");
+     let b = prompt("Введите значение B");
+
+     for (i = a; i<=b; i++){
+      alert(i);
+     }*/
+
+    /* let n = prompt("Введите значение N");
+     let num;
+     let count = 0;
+
+     for(let i = 0; i < n; i++){
+      num = prompt(i+1 + " - число");
+      if(num > 0) count++;
+     }
+     alert("Result : " + count);*/
+
+
+     let n = parseInt(prompt("Введите значение N"));
+     let num;
+     num = parseInt(prompt("Введите первое число "));
+     let max = num;
+
+     for(let i = 1; i < n; i++){
+      num = parseInt(prompt(i + 1 + " - число"));
+      if(num > max) max = num;
+     }
+     alert("Result : " + max); 
+
+
+    </script>
+
+  </body>
+</html>
