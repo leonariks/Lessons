@@ -1,0 +1,372 @@
+body {
+	
+	cursor: url(../курсор/yellow.png), pointer;
+	width:100%;
+	margin: 0 auto;
+	
+}
+
+@font-face {
+	
+	font-family:Star Jedi Outline;
+	src: url(../fonts/StarJediOutline.ttf);
+}
+
+@font-face {
+	
+	font-family: StarJedi Special Edition;
+	src: url(../fonts/StarjediSpecialEdition.ttf);
+}
+
+
+
+.main {
+	
+	position:relative;
+	max-height: 100vh;
+	overflow: hidden;
+}
+
+.main:after{
+
+	content: "";
+	display: block;
+	width:100%;
+	height: 100%;
+	background-color: black;
+	opacity: 70%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+h1 {
+	
+	margin:0;
+	padding: 10px;
+	font-family: StarJedi Special Edition;
+	color: white;
+	text-shadow: 1px 1px 5px orange;
+	font-size: 50px;
+	transition: 0.5s;
+}
+
+h1:hover{
+	
+	text-shadow: 1px 1px 5px blue;
+	cursor: url(../курсор/blue.png), pointer;
+}
+
+.main_title {
+	
+	background-color: black;
+	text-align: center;
+}
+
+video {
+	
+	position: relative;
+	max-width: 100%;
+	z-index:1;
+	background: cover no-repeat fixed;
+	background-size: cover;
+}
+
+.introtxt {
+	
+	position: absolute;
+	top: 0;
+	left:0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+
+.introtitle {
+	
+	font-family:Star Jedi Outline, Arial;
+	font-size: 150px;
+	color: white;
+	text-align: center;
+	margin: 0;
+	text-shadow: 3px 3px 2px black;
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+.introtitle:hover {
+	
+	opacity: 1;
+	transform: translate3d(-3px,-3px,0);
+	cursor: url(../курсор/blue.png), pointer;
+	text-shadow: 1px 1px 10px blue;
+	
+}
+
+a {
+	
+	text-decoration: none;
+}
+
+.navig {
+	
+	position: fixed;
+	height: 60px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: black;
+	display: flex;
+	justify-content: center;
+	z-index: 5;
+}
+
+
+.navig li {
+	
+	list-style: none;
+	margin-left: 15px;
+	margin-top: 18px;
+	
+}
+
+.navig li a {
+	
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	border: 1px solid white;
+	padding: 8px;
+	border-radius: 15px;
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+.navig li:hover a{
+	
+	opacity: 1;
+	background-color: white;
+	color: black;
+}
+
+.about {
+	
+	background: url(../картинки/фон.jpg);
+}
+
+.description {
+	
+	padding: 40px;
+	text-align: center;
+}
+
+
+.text{
+	
+	color: white;
+	font-family: StarJedi Special Edition, Arial;
+	font-size: 20px;
+	text-shadow: 1px 1px 20px yellow;
+	transition: 0.5s;
+}
+
+.text:hover {
+	
+	cursor: url(../курсор/red.png), pointer;
+	text-shadow: 1px 1px 20px red;
+}
+
+p {
+	
+	margin:0;
+}
+
+b {
+	
+	color: Orange;
+}
+
+.pict1 {
+	
+	width: 37%;
+	opacity: 0.7;
+	transition: 0.5s;
+	padding-top: 5px;
+}
+
+.pict1:hover{
+	
+	opacity:1;
+	cursor: url(../курсор/red.png), pointer;
+}
+
+.pict2 {
+	
+	width: 31%;
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+.pict2:hover{
+	
+	opacity:1;
+	cursor: url(../курсор/green.png), pointer;
+}
+
+
+.characters {
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"grid1 grid2";
+	text-align: center;
+}
+
+
+.grid1{
+	
+	background-color: black;
+	
+}
+
+
+.grid2{
+	
+	background-color: white;
+}
+
+
+.darttitle {
+	
+	font-family: StarJedi Special Edition, Arial;
+	color: white;
+	text-shadow: none;
+	transition: 0.5s;
+}
+
+.darttitle:hover{
+	
+	text-shadow: 1px 1px 10px red;
+	cursor: url(../курсор/red.png), pointer;
+}
+
+.luktitle {
+	
+	font-family: StarJedi Special Edition, Arial;
+	color: black;
+	text-shadow: none;
+	transition: 0.5s;
+}
+
+.luktitle:hover{
+	
+	text-shadow: 1px 1px 10px green;
+	cursor: url(../курсор/green.png), pointer;
+}
+
+.video {
+
+	background-color: black;
+	padding: 5px;
+}
+
+.join {
+	
+  display: flex;
+	justify-content: center;
+	max-width: 100%;
+	flex-wrap: wrap;
+	background-color: black;
+	padding: 30px;
+}
+
+
+@media all and (max-width: 1080px) {
+	
+	
+	.introtitle{
+		
+		font-size: 100px;
+	}
+
+	
+	.luktitle {
+		
+		font-size: 36px;
+	}
+	
+	.darttitle {
+		
+		font-size: 36px;
+	}
+}
+
+
+@media all and (max-width: 780px) {
+	
+	
+	.introtitle{
+		
+		font-size: 60px;
+	}
+
+	.text {
+
+		font-size: 18px;
+	}
+	
+	.luktitle {
+		
+		font-size: 26px;
+	}
+	
+	.darttitle {
+		
+		font-size: 26px;
+	}
+	
+	.navig li a {
+	
+	font-size: 14px;
+	font-weight: 700;
+	}
+	
+	.main_title h1 {
+		
+		font-size: 40px;
+	}
+}
+
+
+@media all and (max-width: 560px) {
+	
+	.introtitle {
+		
+		font-size: 50px;
+	}
+	.main_title h1 {
+
+		font-size: 30px;
+	}
+
+	.text {
+
+		font-size: 14px;
+	}
+
+	.luktitle {
+		
+		font-size: 15px;
+	}
+	
+	.darttitle {
+		
+		font-size: 15px;
+	}
+}
