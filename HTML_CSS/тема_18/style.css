@@ -1,0 +1,59 @@
+body {
+	
+	display: grid;
+	grid-template-columns: 1fr 20% 20%;
+	grid-template-rows: 100px 1fr 100px;
+	gap: 10px;
+	grid-template-areas:
+	"header header header"
+	"article nav aside"
+	"footer nav aside";
+	header: 100%;
+}
+
+header, article, nav, aside, footer {
+	
+	background: yellow;
+	padding: 10px;
+}
+
+.header {
+	
+	grid-area: header;
+}
+
+.article {
+	
+	grid-area: article;
+}
+
+.nav {
+	
+	grid-area: nav;
+}
+
+.aside {
+	
+	grid-area: aside;
+}
+
+.footer {
+	
+	grid-area: footer;
+}
+
+@media all and (max-width: 580px) {
+	
+	body {
+		
+		grid-template-areas:
+		"header"
+		"article"
+		"nav"
+		"aside" 
+		"footer";
+		grid-template-columns: 1fr;
+		grid-template-rows: 80px 1fr 80px 1fr 80px;
+		
+	}
+}

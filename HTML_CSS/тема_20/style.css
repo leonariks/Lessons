@@ -1,0 +1,50 @@
+.content {
+	
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.layer {
+	
+	width: 20%;
+	height: 500px;
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+	writing-mode: vertical-rl;
+	position: fixed;
+}
+
+.divOne{
+	
+	background-color: red;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+}
+
+.divTwo{
+	
+	background-color: green;
+	overflow: hidden;
+	white-space: nowrap;
+	top: 100px;
+	left: 100px;
+	z-index: 4;
+}
+
+.divThree{
+	
+	background-color: blue;
+	top: 200px;
+	left: 200px;
+	z-index: 3;
+}
+
+.divFoure{
+	
+	background-color: orange;
+	top: 300px;
+	left: 300px;
+	z-index: 1;
+}

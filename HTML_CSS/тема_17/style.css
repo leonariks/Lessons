@@ -1,0 +1,44 @@
+.grid *{
+	
+	border: 1px solid pink;
+	background-color:yellow;
+	padding: 10px;
+	font-size: 25px;
+	font-family: Arial;
+	color: violet;
+}
+
+.grid {
+	
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: 200px 1fr 200px;
+	grid-template-areas: 
+	"header header"
+	"sidebar main" 
+	"sidebar footer";
+	height: 100%;
+}
+
+header {
+	
+	grid-area: header;
+}
+
+main {
+	
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+}
+
+aside {
+	
+	grid-area: sidebar;
+}
+
+footer {
+	
+	grid-area: footer;
+}

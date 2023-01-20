@@ -1,0 +1,40 @@
+p {
+	
+	text-align: center;
+	font-size: 36px;
+}
+
+p:after{
+	
+	content: "! Мы рады вас приветствовать на сайте";
+}
+
+p:before{
+	
+	content: "Здравствуйте";
+}
+
+h1:after{
+	
+	content: close-quote;
+}
+
+h1:before{
+	
+	content: open-quote;
+}
+
+li:after{
+	
+	content: url(logo.jpg);
+}
+
+li:hover:after{
+	
+	content: url(check.png);
+}
+
+ul {
+	
+	list-style-type: none;
+}
