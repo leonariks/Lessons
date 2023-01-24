@@ -15,11 +15,11 @@
 
       let n2 = prompt("Введите значение N = ");
       let num2;
-      num2 = parseInt(prompt("Введите первое число = "));
+      num2 = Number(prompt("Введите первое число = "));
       let min = num2;
 
       for(let i = 1; i < n2; i++){
-        num2 = parseInt(prompt(i + 1 + " - число"));
+        num2 = Number(prompt(i + 1 + " - число"));
         if(num2 < min) min = num2;
       }
       alert("Результат : " + min); 

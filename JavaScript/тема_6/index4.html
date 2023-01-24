@@ -11,8 +11,8 @@
 
       alert("Задание 1");
 
-      let a = parseInt(prompt("Введите значение A = "));
-      let b = parseInt(prompt("Введите значение B,которое должно быть меньше A = "));
+      let a = Number(prompt("Введите значение A = "));
+      let b = Number(prompt("Введите значение B,которое должно быть меньше A = "));
 
       for (i = a; i>=b; i--){
         alert(i);
@@ -23,7 +23,7 @@
     /* Задание 2 */ 
       alert("Задание 2");
 
-      let n = parseInt(prompt("Введите значение N = "));
+      let n = Number(prompt("Введите значение N = "));
       let num;
       let count = 0;
 
@@ -44,11 +44,11 @@
 
       let n2 = prompt("Введите значение N = ");
       let num2;
-      num2 = parseInt(prompt("Введите первое число = "));
+      num2 = Number(prompt("Введите первое число = "));
       let min = num2;
 
       for(let i = 1; i < n2; i++){
-        num2 = parseInt(prompt(i + 1 + " - число"));
+        num2 = Number(prompt(i + 1 + " - число"));
         if(num2 < min) min = num2;
       }
       alert("Результат : " + min); 
@@ -59,12 +59,12 @@
 
       alert("Задание 4");
 
-      let a2 = parseInt(prompt("Введите значение A = "));
+      let a2 = Number(prompt("Введите значение A = "));
       let b2;
       let result = 1;
       let r;
       for (let j = 1; j<= a; j++){
-        b2 = parseInt(prompt("Введите значение B = "));
+        b2 = Number(prompt("Введите значение B = "));
         r = b2**j;
         if(j % 2 !=0 && j != 1){
           r = -(b2**j);

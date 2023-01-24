@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+
+  <body>
+    <script>
+
+    /*  function max(a, b){
+
+        if (a > b){
+          alert ("Наибольшее число " + a);
+        }else{
+          alert ("Наибольшее число " + b);
+        }  
+      }
+
+      let x, y;
+
+      x = Number(prompt("X"));
+      y = Number(prompt("Y"));
+
+      max(x,y);
+
+      */
+
+
+      let discriminant = function (a, b, c){
+        
+        let d = (b**2) - 4 * a * c;
+        return d;
+      }
+
+      let x = Number(prompt("X"));
+      let y = Number(prompt("Y"));
+      let z = Number(prompt("Z"));
+
+      result = discriminant(x, y, z);
+      alert(result);
+
+    </script>
+  </body>
+
+</html>
