@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
 </head>
 <body>
   
   <script>
-
-    let a = prompt("Введите сторку : ");
-    let result = a.match([а, я, у, ю, о, е, ё, э, и, ы]).length;
-
-    alert(result);
     
+alert("Задание 1");
 
+    let a = prompt("Введите строку : ");
+    let str = a.match(/["аеёиоуыэюя"]/igm).length;
+    alert("Количество гласных = " + str);
+ 
+ alert("Задание 2");
+
+    let a2 = prompt("Введите строку : ");
+    let str2 = a2.match(/[" "]/igm).length;
+    alert("Количество пробелов = " + str2);
+
+alert("Задание 3");
+
+    let a3 = prompt("Введите строку : ");
+    let upper = a3.charAt(0).toUpperCase();
+    alert(upper + a3.slice(1));
+
+ 
   </script>
 
 </body>
