@@ -23,18 +23,20 @@
         alert("Локальный минимум = " + arr[i] + ", его номер = " + i);
       }
     }
-*/
+// Задание 2
     let arr = [];
     let n = prompt("Размер массива N: ");
     for(let i = 0; i < n; i++){
       arr[i] = prompt(i + " элемент массива");
     }
-    for(let i = arr.length; i > 0; i--){
+    for(let i = arr.length; i >= 0; i--){
       if(arr[i]%2!=0) 
        arr.splice(i,1);
     }
     alert(arr);
+    alert(arr.length); */
 
+    
   </script>
 </body>
 </html>
