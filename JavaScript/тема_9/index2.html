@@ -36,6 +36,22 @@
     alert(arr);
     alert(arr.length); */
 
+
+// Задание 3
+
+    let arr = [];
+    let n = prompt("Размер массива N: ");
+    for(let i = 0; i < n; i++){
+      arr[i] = prompt(i + " элемент массива");
+    }
+    let index = 0;
+    let sum = 0;
+    for(let i = 0; i < n; i++){
+      if(arr[i] > 0) index = i;
+    }
+   for(let i = index + 1; i < n; i++){
+    sum += Number(arr[i]);
+   }alert(sum);
     
   </script>
 </body>
