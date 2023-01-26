@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+// Задание 3 (Сумма между первым положительным и последним отрицательным числами)
+
+let a = [];
+let n = prompt("Введите значение N: ");
+for(let i = 0; i < n; i++){
+  a[i] = prompt(i + " элемент массива");
+}
+
+let pos = 0;
+let neg = 0;
+let sum = 0;
+
+for(let i = 0; i < n; i++){
+  if(a[i] > 0)
+   {pos = i
+   break; }
+}
+
+for(let j = 0; j < n; j++){
+  if(a[j] < 0){ 
+  neg = j;}
+}
+
+for(let i = pos + 1; i < neg; i++){
+  sum += Number(a[i]); 
+}
+alert(sum);
+
+    
+  </script>
+</body>
+</html>

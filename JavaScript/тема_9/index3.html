@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+// Задание 1 
+
+//Здравствуйте! Хотел сказать, что в видео по теме 9 Практикум 2 в первом упражнении была допущена ошибка, так как по заданию нужно было найти номер лишь первого минимума ,а не всех. 
+ 
+//N = 6
+//-3 6 2 5 -1 4
+//0 1 2 3 4 5
+/*
+let a = [];
+let n = prompt("Введите значение N: ");
+for(let i = 0; i < n; i++){
+  a[i] = prompt(i + " элемент массива");
+}
+
+let number;
+
+for(let i = 1; i < n-1; i++){
+  if(a[i] > a[i -1] && a[i] > a[i +1]){
+    number = i;
+  }
+}alert("Номер локального максимума = " + number);
+
+
+
+// Задание 2 
+   
+let a = [];
+let n = prompt("Введите значение N: ");
+for(let i = 0; i < n; i++){
+  a[i] = prompt(i + " элемент массива");
+}
+
+for (let i = a.length; i>= 0; i--){
+  if(a[i]%2 == 0){
+    a.splice(i,1);
+  }
+}alert("Значения массива A = " + a +"\n" + "Длина массива A =" + a.length);
+
+
+
+// Задание 3
+
+// И в упражнении 3 также была допущена ошибка, по заданию нужно было найти сумму чисел до последнего положительного числа, а не после.
+
+let a = [];
+let n = prompt("Введите значение N: ");
+for(let i = 0; i < n; i++){
+  a[i] = prompt(i + " элемент массива");
+}
+
+let neg1 = 0;
+let neg2 = 0;
+let sum = 0;
+
+for(let i = 0; i < n; i++){
+  if(a[i] < 0)
+   {neg1 = i
+   break; }
+}
+
+for(let j = 0; j < n; j++){
+  if(a[j] < 0){ 
+  neg2 = j;}
+}
+
+for(let i = neg1 + 1; i < neg2; i++){
+  sum += Number(a[i]); 
+}
+alert(sum);
+
+
+
+// Задание 4
+
+    let a = [];
+   let b = [];
+   let n = prompt("Размер массива N: ");
+
+   for(let i = 0; i < n; i++){
+    a[i] = prompt(i + " элемент массива");
+   }
+
+   for(let i = 0; i < n; i++){
+      if(a[i]%2!=0){
+     b.push(a[i]);
+    }
+   }
+
+   alert("Значения массива B = " + b +"\n" + "Длина массива B =" + b.length);
+
+   */
+
+   
+// Задание 5
+
+   let a = [];
+   let b = [];
+   let n = prompt("Размер массива N: ");
+   for(let i = 0; i < n; i++){
+    a[i] = Number(prompt(i + " элемент массива"));
+   }
+   for(let i = 0; i < n-1; i++){
+    for(let j = i + 1; j < n; j++){
+      if(a[i] < a[j]){
+        let swap = a[i];
+        a[i] = a[j];
+        a[j] = swap;
+      }
+    }
+   }
+   alert[a];
+
+  </script>
+</body>
+</html>

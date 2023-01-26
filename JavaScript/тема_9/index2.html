@@ -10,6 +10,9 @@
   <script>
 
 /*
+
+//Здравствуйте! Хотел сказать, что в видео по теме 9 Практикум 2 в первом упражнении была допущена ошибка, так как по заданию нужно было найти номер лишь первого минимума ,а не всех. 
+
     let arr = [];
     let n = prompt("Размер массива N: ");
     //N = 6
@@ -34,10 +37,12 @@
        arr.splice(i,1);
     }
     alert(arr);
-    alert(arr.length); */
+    alert(arr.length); 
 
 
 // Задание 3
+
+// И в упражнении 3 также была допущена ошибка, по заданию нужно было найти сумму чисел до последнего положительного числа, а не после.
 
     let arr = [];
     let n = prompt("Размер массива N: ");
@@ -52,6 +57,42 @@
    for(let i = index + 1; i < n; i++){
     sum += Number(arr[i]);
    }alert(sum);
+   
+
+// Задание 4
+
+   let a = [];
+   let b = [];
+   let n = prompt("Размер массива N: ");
+
+   for(let i = 0; i < n; i++){
+    a[i] = prompt(i + " элемент массива");
+   }
+
+   for(let i = 0; i < n; i++){
+    if(a[i]%2==0) b.push(a[i]);
+   }
+   alert(b);
+   alert(b.length);
+
+   */
+// Задание 5
+
+   let a = [];
+   let b = [];
+   let n = prompt("Размер массива N: ");
+   for(let i = 0; i < n; i++){
+    a[i] = Number(prompt(i + " элемент массива"));
+   }
+   for(let i = 0; i < n-1 ; i++){
+    for(let j = i + 1; j < n; j++){
+      if(a[i] > a[j]){
+        let spaw = a[i];
+        a[i] = a[j];
+        a[j] = spaw;
+      }
+    }
+   } alert(a);
     
   </script>
 </body>
