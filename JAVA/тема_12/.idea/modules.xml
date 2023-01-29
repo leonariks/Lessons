@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/practise_8/Books/Books.iml" filepath="$PROJECT_DIR$/practise_8/Books/Books.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_12/Hometask/Hometask.iml" filepath="$PROJECT_DIR$/lesson_12/Hometask/Hometask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_12/abstract/abstract.iml" filepath="$PROJECT_DIR$/lesson_12/abstract/abstract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_12/extends/extends.iml" filepath="$PROJECT_DIR$/lesson_12/extends/extends.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_12/lesson_12.iml" filepath="$PROJECT_DIR$/lesson_12/lesson_12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_12/nested/nested.iml" filepath="$PROJECT_DIR$/lesson_12/nested/nested.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practise_8/practise_8.iml" filepath="$PROJECT_DIR$/practise_8/practise_8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/тема_12.iml" filepath="$PROJECT_DIR$/.idea/тема_12.iml" />
+    </modules>
+  </component>
+</project>
