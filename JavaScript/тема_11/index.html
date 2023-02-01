@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let m = [];
+    let n = prompt("Введите кол-во строк: ");
+    let s = prompt("Введите кол-во столбцов");
+    for(let i = 0; i < n; i++){
+      m[i] = new Array();
+      for(let j = 0; j < s; j++){
+       m[i][j] = prompt(i + " " + j);
+      }
+    }
+    for(let i = 0; i < n; i++){
+      for(let j = 0; j < s; j++){
+        document.write(m[i][j] + " ");
+      }document.write("<br>" + "<br>");
+    }
+
+  </script>
+</body>
+</html>
