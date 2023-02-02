@@ -13,4 +13,14 @@ public class Turtle extends Animal{
     public void setLikesWater(boolean likesWater) {
         this.likesWater = likesWater;
     }
+
+    @Override
+    public void print() {
+        System.out.println(getName() + " черепаха водная " + isLikesWater());
+    }
+
+    @Override
+    public String toString() {
+        return getName() + " черепаха водная " + isLikesWater();
+    }
 }
