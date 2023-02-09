@@ -1,9 +1,144 @@
-<!DOCTYPE html>
+
 <html lang="ru">
-<head>
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <title>Document</title>
+
+    <!--CSS
+======================================== -->
+    <style>
+
+      body{
+        width: 1000px;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      div{
+        box-shadow: 0px 1px 10px gray;
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid green;
+      }
+
+      input[type=text]:focus, input[type=number]:focus, select:focus{
+        outline: none;
+        border: 2px solid green;
+      }
+
+      button{
+        border: 2px solid green;
+        color: white;
+        background-color: green;
+        width: 100%;
+        height: 50px;
+      }
+
+      button:hover{
+        border: 2px solid darkgreen;
+        color: white;
+        background-color: darkgreen;
+        width: 100%;
+        height: 50px;
+      }
+
+      img{
+        width: 200px;
+      }
+
+      input:invalid{
+        border: red solid 3px;
+      }
+      
+    </style>
+
+<!--JavaScript
+======================================== -->
+    <script>
+      function calculationBMR(){
+        let weight = document.getElementById("weight");
+        let growth = document.getElementById("growth");
+        let age = document.getElementById("age");
+        let bmr = 0;
+        if(document.getElementsByName("gender")[0].checked){
+        bmr = 66+(13.7*weight.value)+(5*growth.value)-(6.8*age.value);
+        }else {
+        bmr = 655+(9.6*weight.value)+(1.8*growth.value)-(4.7*age.value);
+        }
+        switch(document.getElementById("activity").value){
+          case "Сидячий образ": bmr *= 1.2;
+            break;
+          case "Маленькая активность": bmr *= 1.375;
+            break;
+          case "Средняя активность": bmr *= 1.55;
+            break;
+          case "Сильная активность": bmr *= 1.725;
+            break;
+          case "Максимальная активность": bmr *= 1.9;
+            break;
+        }
+        document.getElementById("result").innerText = "Калорий в сутки " + bmr;
+      }
+
+      function showPicture(){
+        if(document.getElementsByName("gender")[0].checked){
+          switch(document.getElementById("activity").value){
+          case "Сидячий образ": document.getElementById("picture").src = "images/М1.png";
+            break;
+          case "Маленькая активность": document.getElementById("picture").src = "images/М2.png";
+            break;
+          case "Средняя активность": document.getElementById("picture").src = "images/М3.png";
+            break;
+          case "Сильная активность": document.getElementById("picture").src = "images/М4.png";
+            break;
+          case "Максимальная активность": document.getElementById("picture").src = "images/М5.png";
+            break;
+        }
+        }else {
+          switch(document.getElementById("activity").value){
+          case "Сидячий образ": document.getElementById("picture").src = "images/Ж1.png";
+            break;
+          case "Маленькая активность": document.getElementById("picture").src = "images/Ж2.png";
+            break;
+          case "Средняя активность": document.getElementById("picture").src = "images/Ж3.png";
+            break;
+          case "Сильная активность": document.getElementById("picture").src = "images/Ж4.png";
+            break;
+          case "Максимальная активность": document.getElementById("picture").src = "images/Ж5.png";
+            break;
+        }
+        }
+      }
+
+    </script>
+
+  </head>
+      <!--HTML
+======================================== -->
+  <body>
+
+    <div>
+
+      <label>Вес: <input type="text" id="weight" pattern="[0-9]{3}"></label><hr>
+      <label>Рост: <input type="number" id="growth"  pattern="[0-9]"></label><hr>
+      <label>Возраст: <input type="number" id="age"  pattern="[0-9]"></label><hr>
+      <input type="radio" name="gender" checked onclick="showPicture()">Мужской
+      <input type="radio" name="gender" onclick="showPicture()">Женский
+      <hr>
+      <select id="activity" onchange="showPicture()">
+        <option value="Сидячий образ">Сидячий образ</option>
+        <option value="Маленькая активность">Маленькая активность</option>
+        <option value="Средняя активность">Средняя активность</option>
+        <option value="Сильная активность">Сильная активность</option>
+        <option value="Максимальная активность">Максимальная активность</option>
+      </select>
+      <hr>
+      <button type="button" onclick="calculationBMR()">Применить</button>
+      <hr>
+      <label id="result"></label>
+      <hr>
+      <img src="images/М1.png" alt="" id="picture">
+
+    </div>
+
+  </body>
 </html>
