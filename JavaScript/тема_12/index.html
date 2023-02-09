@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <script>
+
+  window.addEventListener("onload", writeMessage());
+  //onload = onload= writeMessage();
+
+  let f = document.authorization;
+  let f2 = document.forms["authorization"];
+  let f3 = document.forms[0];
+  let f4 = document.getElementsByTagName("form")[0];
+
+
+  function add(){
+    let f = document.getElementsByTagName("form")[1];
+    f.Login.value = "User 1";
+    f.Password.value = "Password";
+    f.Name.value = "Name";
+  }
+
+  function writeMessage(){
+    alert("Salam!");
+  }
+
+ </script>
+</head>
+<body>
+
+  <form action="" name="authorization" onsubmit="writeMessage()">
+
+    <select onchange="writeMessage()">
+      <option value="">1</option>
+      <option value="">2</option>
+      <option value="">3</option>
+    </select>
+
+    Логин<input type="text" name="Login"><br>
+    Пароль<input type="text" name="Password" onkeyup="writeMessage()"><br>
+    Имя<input type="text" name="Name" onkeydown="writeMessage()"><br>
+    <button type="button" onclick="add()">Ok</button>
+    <input type="submit">
+  </form>
+  <form action="" name="registration">
+    Логин<input type="text" name="Login"><br>
+    Пароль<input type="text" name="Password"><br>
+    Имя<input type="text" name="Name"><br>
+    <button type="button" onclick="writeMessage()">Ok</button>
+  </form>
+
+</body>
+</html>
