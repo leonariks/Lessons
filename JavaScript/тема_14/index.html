@@ -1,22 +1,64 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <script>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-    class Teacher{
-      name 
-    }
+    <script>
 
-    let person1 = new Teacher();
-    person1.name="Илья";
-    let person2 = new Teacher();
-    person1.name="Екатерина";
-    let person3 = new Teacher();
-    person1.name="Андрей";
+      class Teacher{
+      //  bigName = ""
+        #Age = 18
+        constructor(name, subject){
+         // this._name = name
+          this.subject = subject
+        }
 
-  </script>
-</head>
-<body>
-  
-</body>
+        set name(value){
+          this._name = value.toUpperCase();
+        }
+        get name(){
+          return this._name;
+        }
+
+        show(){
+          alert("Имя преподавателя: " + this._name + " , предмет - " + this.subject + " , возраст " + this.#Age);
+        }
+      }
+
+      class ContactTeacher extends Teacher{
+        constructor(name, email){
+          super(name);
+          this.email = email;
+        }
+        show2(){
+          alert("Имя " + this.name + " email " + this.email);
+        }
+      }
+
+     
+
+      
+      let person1 = new Teacher("илья буканов", "Backend - разработка на фреймворке Spring");
+      person1.name = "Андрей";
+      person1.show();
+      
+      /*
+      let person2 = new Teacher("екатерина бойцова", "Backend - разработка на фреймворке Django");
+      let person3 = new Teacher("андрей вилков", "Сетевые технологии");
+      person1.show();
+      person2.show();
+      person3.show();
+       let person4 = new ContactTeacher("Андрей Шимбирёв", "email@gmail.com");
+      person4.show2();
+      */
+
+    </script>
+
+  </head>
+  <body>
+    
+  </body>
 </html>
