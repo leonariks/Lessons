@@ -55,17 +55,14 @@ let n = prompt("Размер массива N: ");
 
     for(let i = 0; i < n; i++){
       for(let j = 0; j < n; j++){
-        if(j == n){
+        if(i+j == n-1){
           m[i][j] = 0;
-          document.write("<span>" + m[i][j] + " </span>");
-          n--;
         }
-        else{
-          document.write(m[i][j] + "  ");
-        }
+        document.write(m[i][j] + "  ");
       }
       document.write("<br>");
     }
+
 
 /*
 //Задача 3 ===================================
