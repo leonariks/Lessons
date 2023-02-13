@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script>
+
+   
+   let m = Number(prompt("Введите колличество клиентов: "));
+   let client;
+   let n = [m];
+  for(let i = 1; i <= m; i++){
+        client = {
+        number: 1,
+        lastName: prompt("Введите фамилию: "),
+        firstName: prompt("Введите имя: "),
+        middleName: prompt("Введите отчество: "),
+        age: Number(prompt("Введите возраст: ")),
+    }
+    }
+
+
+    if(client.age > 18){
+      alert("Номер клиента: " + n.number + ";\nФамилия и инициалы: " + n.lastName + " " + n.firstName.charAt(0) + ". " + n.middleName.charAt(0) + ". ;\n");
+    }
+  
+
+
+
+
+/*
+    class Employee{
+
+      firstName
+      lastName
+      rate
+      worksDay
+      salary
+
+      getSalary(){
+        alert("Ваша зарплата составляет: " + this.rate * this.worksDay + " рублей.");
+      }
+    }
+
+    let person = new Employee();
+    person.firstName = prompt("Имя: ");
+    person.lastName = prompt("Фамилия: ");
+    person.rate = Number(prompt("Ставка за день работы: "));
+    person.worksDay = Number(prompt("Отработанных дней: "));
+
+    alert(person.firstName + " " + person.lastName + ", ваша ставка в день составляет: " + person.rate + " рублей, вы отработали: " + person.worksDay + " дней");
+    person.getSalary();
+
+    */
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
