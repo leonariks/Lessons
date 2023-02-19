@@ -3,25 +3,25 @@
 <head>
   <script>
 
-   
-   let m = Number(prompt("Введите колличество клиентов: "));
-   let client;
-   let n = [m];
-  for(let i = 1; i <= m; i++){
-        client = {
-        number: 1,
-        lastName: prompt("Введите фамилию: "),
-        firstName: prompt("Введите имя: "),
-        middleName: prompt("Введите отчество: "),
-        age: Number(prompt("Введите возраст: ")),
+    let client = Object();
+    let next = true;
+    let i = 1;
+    while(next){
+      client[i] = Object();
+      client[i].id = i;
+      client[i].lastName = prompt("Фамилия: ");
+      client[i].firstName = prompt("Имя: ");
+      client[i].middleName = prompt("Отчество: ");
+      client[i].age = prompt("Возраст: ");
+      next = confirm("Хотитек добавить ещё одного клиента?");
+      i++;
     }
+    for(let j = 1; j < i; j++){
+      if(client[j].age >= 18){
+        document.write(client[j].id + " " + client[j].lastName + " " + client[j].firstName[0] + "." + client[j].middleName[0] + ".<br>");
+      }
     }
-
-
-    if(client.age > 18){
-      alert("Номер клиента: " + n.number + ";\nФамилия и инициалы: " + n.lastName + " " + n.firstName.charAt(0) + ". " + n.middleName.charAt(0) + ". ;\n");
-    }
-  
+    
 
 
 
