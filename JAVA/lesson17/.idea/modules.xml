@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/auth/auth.iml" filepath="$PROJECT_DIR$/auth/auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/builder/builder.iml" filepath="$PROJECT_DIR$/builder/builder.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lesson_16.iml" filepath="$PROJECT_DIR$/lesson_16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson17.iml" filepath="$PROJECT_DIR$/lesson17.iml" />
       <module fileurl="file://$PROJECT_DIR$/reg/reg.iml" filepath="$PROJECT_DIR$/reg/reg.iml" />
     </modules>
   </component>

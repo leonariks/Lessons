@@ -18,10 +18,15 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
         String string = in.nextLine();
-        if (string.matches("\\d+")) {
+        if (string.matches("(!|@|-|\\*)?\\d*")) {
             System.out.println("true");
         } else {
             System.out.println("false");
         }
+
+        System.out.println(string.matches("[a-zA-Zа-яА-Я6789]"));
+        System.out.println(string.matches("[^а-д]{3,6}"));
+        System.out.println(string.matches("\\d{3,6}"));
+        System.out.println(string.matches("(\\+7|7|8)+(\\d{10})"));
     }
 }
