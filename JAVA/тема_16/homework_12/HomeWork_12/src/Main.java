@@ -3,65 +3,66 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        auth();
+    }
+
+
+    public static void auth() {
+
         Scanner in = new Scanner(System.in);
-        ArrayList<Flights> flight = new ArrayList<>();
+        ArrayList<User> users = new ArrayList<>();
         while (true) {
-            System.out.println("1) Добавление нового рейса\n2) Вывод всех рейсов\n3) Вывод всех рейсов");
-            switch (in.nextLine()) {
-                case "1":
-                    Flights flights = new Flights();
-                    boolean nonunic;
-                    do {
-                        nonunic = false;
-                        System.out.println("Введите номер рейса");
-                        while (!flights.setId(in.nextLine())) ;
-                        for (Flights fl : flight) {
-                            if (fl.equals(flights)) {
-                                nonunic = true;
-                            }
-                        }
+            System.out.println("Введите:\n1 - авторизоваться\n2 - зарегистрироваться");
+            int inputMenu = in.nextInt();
+            in.nextLine();
+            switch (inputMenu) {
+                case 1:
+                    System.out.println("Авторизация");
+                    System.out.println("Введите логин:");
+                    String loginAuth = in.nextLine();
+                    System.out.println("Введите пароль:");
+                    String pasAuth = in.nextLine();
 
-                    } while (nonunic);
-                    System.out.println("Введите наименование аэропорта");
-                    flights.setAirport(in.nextLine());
-                    System.out.println("Введите название авиакомпании");
-                    flights.setCompany(in.nextLine());
-                    System.out.println("Введите пункт назначения");
-                    flights.setPointB(in.nextLine());
-                    System.out.println("Введите время вылета");
-                    while (!flights.setTime(in.nextLine())) ;
-                    System.out.println("Введите стоимость билета");
-                    flights.setPrice(in.nextDouble());
-                    in.nextLine();
-                    System.out.println("1) Подтвердить добавление нового рейса\n2) Отменить добавление нового рейса");
-                    boolean stop;
-                    do {
-                        stop = false;
-                        switch (in.nextLine()) {
-                            case "1":
-                                flight.add(flights);
-
-                                break;
-
-                            case "2":
-
-                                break;
-                            default:stop = true;
-                        }
-                    } while (stop);
-
-                    break;
-
-                case "2":
-                    for (Flights fl : flight) {
-                        System.out.println(fl);
+                    if (!findUser(loginAuth, pasAuth, users)){
+                        System.out.println("Вы ввели некорректные данные!");
                     }
+
                     break;
 
-                case "3":
-
-                    return;
+                case 2:
+                    System.out.println("Регистрация");
+                    System.out.println("Введите логин:");
+                    String login = in.nextLine();
+                    System.out.println("Введите пароль:");
+                    String pas = in.nextLine();
+                    System.out.println("Введите имя:");
+                    String firstName = in.nextLine();
+                    System.out.println("Введите Фамилию:");
+                    String secondName = in.nextLine();
+                    System.out.println("Введите Отчество:");
+                    String surname = in.nextLine();
+                    System.out.println("Введите номер телефона:");
+                    String telephone = in.nextLine();
+                    System.out.println("Введите email:");
+                    String email = in.nextLine();
+                    users.add(new User(login, pas, firstName, secondName, surname, telephone, email));
+                    System.out.println("Вы зарегистрированы");
+                    break;
+                default:
+                    System.out.println("Выберите действие!");
             }
         }
     }
+
+    static boolean findUser(String login, String pas, ArrayList<User> users) {
+        for (User user : users) {
+            if (user.getLogin().equals(login) && user.getPas().equals(pas)) {
+                System.out.println("Вы авторизованы!");
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
