@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script src="script.js"></script>
+
+  <style>
+    .container{
+      display: flex;
+      background-color: cadetblue;
+      height: 100%;
+      padding: 20px;
+      gap: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .container>div{
+      background-color: bisque;
+      border: 2px solid rgb(160, 89, 2);
+      border-radius: 15px;
+      padding: 5px;
+    }
+
+    img{
+      border-radius: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div onclick="btnStyle()">
+      Фильтры картинки <br>
+      <input type="radio" name="but" id="blur" checked> Размытие<br>
+      <input type="radio" name="but" id="brightness"> Яркость<br>
+      <input type="radio" name="but" id="contrast"> Контраст<br>
+      <input type="radio" name="but" id="grayscale"> Оттенки серого<br>
+      <input type="radio" name="but" id="hueRotate"> Оттенок-поворот<br>
+      <input type="radio" name="but" id="invert"> Инверсия<br>
+      <input type="radio" name="but" id="opacity"> Непрозрачность<br>
+      <input type="radio" name="but" id="saturate"> Насыщенность<br>
+      <input type="radio" name="but" id="sepia"> Сепия<br>
+      <input type="range" id="range" min="0" max="100" value="0" onchange="btnStyle()"><br>
+      Размер картинки<br><input type="number" id="size" value="100" min="0" max="100" onchange="changeSize()">
+    </div>
+
+    <div>
+      <img src="ipad.jpg" width="100%">
+    </div>
+
+  </div>
+
+</body>
+</html>

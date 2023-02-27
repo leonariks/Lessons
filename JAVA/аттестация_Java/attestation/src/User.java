@@ -16,6 +16,7 @@ public class User {
 
     public void setLogin(String login) {
         this.login = login;
+
     }
 
     public String getPass() {
@@ -87,16 +88,11 @@ public class User {
 
         User user = (User) o;
 
-        if (!Objects.equals(login, user.login)) return false;
-        if (!Objects.equals(tel, user.tel)) return false;
-        return Objects.equals(email, user.email);
+        return Objects.equals(login, user.login);
     }
 
     @Override
     public int hashCode() {
-        int result = login != null ? login.hashCode() : 0;
-        result = 31 * result + (tel != null ? tel.hashCode() : 0);
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        return result;
+        return login != null ? login.hashCode() : 0;
     }
 }

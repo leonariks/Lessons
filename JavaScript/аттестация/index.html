@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+
+      body{
+        width: 1000px;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      div{
+        box-shadow: 0px 1px 10px green;
+        margin: 10px;
+        padding: 20px;
+        border: 2px solid green;
+        border-radius: 10px;
+      }
+      #show, #hide{
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      input[type=text]:focus, input[type=number]:focus, select:focus{
+        outline: none;
+        border: 2px solid green;
+      }
+
+      button{
+        border: 2px solid green;
+        border-radius: 20px;
+        color: white;
+        font-weight: 900;
+        font-size: 20px;
+        background-color: green;
+        width: 100%;
+        height: 50px;
+      }
+
+      button:hover{
+        border: 2px solid darkgreen;
+        color: white;
+        background-color: darkgreen;
+        width: 100%;
+        height: 50px;
+        cursor: pointer;
+      }
+
+      input:invalid{
+        border: red solid 3px;
+      }
+
+      form label input{
+        cursor: pointer;
+      }
+
+  </style>
+
+  <script>
+    function calculation(){
+        let summ = document.getElementById("summ");
+        let summ2 = document.getElementById("summ2");
+
+        let interest = document.getElementById("interest");
+        let interest2 = document.getElementById("interest2");
+
+
+        let days = document.getElementById("days");
+        let days2 = document.getElementById("days2");
+
+        let show = document.getElementById("show");
+        let hide = document.getElementById("hide");
+        let s;
+
+        if(document.getElementsByName("choice")[0].checked){
+          show.style.display = "block";
+          hide.style.display = "none";
+          s = Math.round(((summ.value)*(interest.value)*((days.value)/(year.value)))/100);
+        }else {
+          show.style.display = "none";
+          hide.style.display = "block";
+          s = Math.round(((summ2.value)*(interest2.value)*((days2.value)/(year.value)))/100);
+        }     
+        document.getElementById("result").innerText = "Итого: " + s;
+      }
+
+
+  </script>
+</head>
+
+<body>
+  <div>
+    <div id="show" onchange="calculation()">
+      <label name="show">Сумма вклада: <input type="number" id="summ" min="10000" max="100000000" value="10000"></label><hr name="show">
+      <label>Годовая ставка: <input type="number" id="interest" value="10" max="100"></label><hr name="show">
+      <label>Срок размещения в днях: <input type="number" id="days" value="720"></label><hr name="show">
+    </div>
+
+    <div id="hide" style="display: none;" onchange="calculation()">
+      <label>Сумма вклада + все суммы, полученные от капитализации: <input type="number" id="summ2" min="10000" max="100000000" value="10000"></label><hr>    
+      <label>Процентная ставка по депозиту: <input type="number" id="interest2" value="10" max="100"></label><hr>
+      <label>Количество дней в отрезке времени, за который осуществляется капитализация: <input type="number" id="days2" value="365"></label><hr>
+    </div>  
+
+    <label>Дней в году: <input type="number" id="year" min="365" max="366" value="365" onchange="calculation()"></label><hr>
+    <form>
+      <label onchange="calculation()">Капитализация
+        <input type="radio" name="choice" checked="checked" value="Нет" /><span>Нет</span>
+        <input type="radio" name="choice" value="Есть" /><span>Есть</span>
+      </label>
+    </form><hr> 
+    <button type="button" onclick="calculation()">Применить</button><hr>   
+    <label id="result"></label>
+  </div>
+
+</body>
+</html>

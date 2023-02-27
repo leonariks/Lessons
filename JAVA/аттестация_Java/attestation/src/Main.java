@@ -9,11 +9,12 @@ public class Main {
     public static void auth() {
         Scanner in = new Scanner(System.in);
         ArrayList<User> users = new ArrayList<>();
-        User admin = new User();
-        admin.setLogin("admin");
-        admin.setPass("pass");
+
         while (true) {
             User user = new User();
+            User admin = new User();
+            admin.setLogin("admin");
+            admin.setPass("pass");
             System.out.println("1 - Регистрация\n2 - Авторизация");
             int input = in.nextInt();
             in.nextLine();
@@ -58,7 +59,7 @@ public class Main {
                         for (User us : users) {
                             if (us.equals(user)) {
                                 nonunic = true;
-                                System.out.println("Телефон занят!");
+                                System.out.println("Email занят!");
                             }
                         }
                     } while (nonunic);
@@ -72,9 +73,9 @@ public class Main {
                     user.setLogin(in.nextLine());
                     System.out.println("Password:");
                     user.setPass(in.nextLine());
-                    if (!findAdmin(user.getLogin(), user.getPass(), users)){
-                        System.out.println("Неккоректный Логин/Пароль.");
-                    }else if (!findUser(user.getLogin(), user.getPass(), users)) {
+                    if (user.getLogin().equals(admin.getLogin()) && user.getPass().equals(admin.getPass())) {
+                        System.out.println("Вы авторизованы в роли администратора!");
+                    } else if (!findUser(user.getLogin(), user.getPass(), users)) {
                         System.out.println("Неккоректный Логин/Пароль.");
                     }
                     break;
@@ -83,16 +84,6 @@ public class Main {
                     System.out.println("Non");
             }
         }
-    }
-
-    static boolean findAdmin(String login, String pass, ArrayList<User> users) {
-        for (User admin : users) {
-            if (admin.getLogin().equals(login) && admin.getPass().equals(pass)) {
-                System.out.println("Вы авторизованы в роли администратора!");
-                return true;
-            }
-        }
-        return false;
     }
 
     static boolean findUser(String login, String pass, ArrayList<User> users) {
@@ -104,4 +95,5 @@ public class Main {
         }
         return false;
     }
+
 }
