@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление товаров</title>
+</head>
+<body>
+<h1>Добавление товара</h1>
+<form th:method="POST" th:action="@{/product/add}" th:object="${product}">
+  <label for="name">Введите наименование товара: </label>
+  <input type="text" th:field="*{name}" id="name"><br>
+  <label for="price">Введите цену товара: </label>
+  <input type="text" th:field="*{price}" id="price"><br>
+  <label for="weight">Введите вес товара: </label>
+  <input type="text" th:field="*{weight}" id="weight"><br>
+  <label for="provider">Введите поставщика: </label>
+  <select id="provider" th:field="*{provider}">
+    <option th:each="enum:${T(com.example.products.enumm.Provider).values()}" th:text="${enum.getDisplayValue()}" th:value="${enum}">
+
+    </option>
+  </select>
+  <br>
+  <input type="submit" value="Добавить">
+</form>
+</body>
+</html>
