@@ -5,33 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf9caf80-2170-4726-9b9f-7863d5ce4c2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Hatchback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Jeep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ShopCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ApplicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/src/main/java/Furniture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/src/main/resources/ApplicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Beans/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ShopCar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Hatchback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Hatchback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Jeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Jeep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShopCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/ShopCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ApplicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ApplicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ApplicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ApplicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Hatchback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Jeep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ShopCar.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +51,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Mb5HU37PL2eMribPzGNyvcmDi2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -69,13 +62,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Desktop/Учеба-практика/Lessons/Spring/lesson_3.2",
+    "last_opened_file_path": "C:/Desktop/Учеба-практика/Lessons/Spring/lesson_3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "preferences.editor",
     "spring.configuration.checksum": "0fcdb89309b1a46d748cc397089f8510",
     "vue.rearranger.settings.migration": "true"
   }
@@ -89,7 +83,8 @@
       <option name="presentableId" value="Default" />
       <updated>1678023355711</updated>
       <workItem from="1678023357074" duration="2215000" />
-      <workItem from="1678025839147" duration="191000" />
+      <workItem from="1678025839147" duration="5112000" />
+      <workItem from="1678616171424" duration="6182000" />
     </task>
     <servers />
   </component>
