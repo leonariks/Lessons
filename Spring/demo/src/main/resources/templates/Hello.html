@@ -5,7 +5,9 @@
     <title>Первое приложение на фреймворке Spring</title>
 </head>
 <body>
-    <p>Приветствую, вы создали первое приложение на языке Java </p>
-    <a href="/spring/message">Нажми и перейди</a>
+<h1>Вас приветствует страница по выводу вашего ФИО</h1>
+<p th:text="${last_name}">Фамилия</p>
+<p th:text="${first_name}">Имя</p>
+<p th:text="${patronymic}">Отчество</p>
 </body>
 </html>

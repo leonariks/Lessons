@@ -7,12 +7,10 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest(HelloControllerTest.class)
+
+@WebMvcTest(HelloController.class)
 class HelloControllerTest {
 
     @Autowired
@@ -20,13 +18,17 @@ class HelloControllerTest {
 
     @Test
     void getHello() throws Exception {
-        mockMvc.perform(get("/spring/Hello"))
+        mockMvc.perform(get("/spring/hello"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("Hello"))
-                .andExpect(content().string(containsString("Приветствую, вы создали первое приложение на языке Java")));
+                .andExpect(view().name("hello"))
+                .andExpect(content().string(containsString("qwerty")));
     }
 
     @Test
-    void getMessage() {
+    void getMessage() throws Exception {
+        mockMvc.perform(get("/spring/message"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("message"))
+                .andExpect(content().string(containsString("qwe")));
     }
 }
