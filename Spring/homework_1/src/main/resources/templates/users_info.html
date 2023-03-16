@@ -10,7 +10,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        div{
+        .container {
             box-shadow: 0px 1px 10px green;
             padding: 20px;
             border: 2px solid green;
@@ -33,11 +33,11 @@
             transition: .5s;
         }
 
-        a:hover{
+        a:hover {
             color: darkblue;
         }
 
-        .but{
+        .but {
             border: 2px solid green;
             border-radius: 15px;
             background: green;
@@ -47,26 +47,25 @@
             cursor: pointer;
         }
 
-        .but:hover{
+        .but:hover {
             background: darkgreen;
             border: 2px solid darkgreen;
         }
 
-
     </style>
 </head>
 <body>
-    <div>
-        <p th:text="'Пользователь № ' + ${users.getId()}"></p>
-        <p th:text="'Фамилия: ' + ${users.getSecond_name()}"></p>
-        <p th:text="'Имя: ' + ${users.getFirst_name()}"></p>
-        <p th:text="'Отчество: ' + ${users.getSurname()}"></p>
-        <p th:text="'Возраст: ' + ${users.getAge()}"></p>
-        <p th:text="'Почта: ' + ${users.getEmail()}"></p>
-        <p th:text="'Номер телефона: ' + ${users.getTelephone()}"></p>
-    </div>
-        <a class="but" th:href="@{/users/edit/{id}(id=${users.getId()})}">Редактирование пользователя</a>
-        <a class="but" th:href="@{/users/delete/{id}(id=${users.getId()})}">Удаление пользователя</a>
+<div class="container">
+    <p th:text="'Пользователь № ' + ${users.getId()}"></p>
+    <p th:text="'Фамилия: ' + ${users.getSecond_name()}"></p>
+    <p th:text="'Имя: ' + ${users.getFirst_name()}"></p>
+    <p th:text="'Отчество: ' + ${users.getSurname()}"></p>
+    <p th:text="'Возраст: ' + ${users.getAge()}"></p>
+    <p th:text="'Почта: ' + ${users.getEmail()}"></p>
+    <p th:text="'Номер телефона: ' + ${users.getTelephone()}"></p>
+</div>
+<a class="but" th:href="@{/users/edit/{id}(id=${users.getId()})}">Редактирование пользователя</a>
+<a class="but" th:href="@{/users/delete/{id}(id=${users.getId()})}">Удаление пользователя</a>
 
 </body>
 </html>

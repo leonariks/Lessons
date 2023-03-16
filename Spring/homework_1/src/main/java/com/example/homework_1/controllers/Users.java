@@ -1,8 +1,10 @@
 package com.example.homework_1.controllers;
 
 import com.example.homework_1.dao.DaoUsers;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -34,7 +36,10 @@ public class Users {
     }
 
     @PostMapping("/users/add")
-    public String newUsers(@ModelAttribute("users") com.example.homework_1.models.Users users){
+    public String newUsers(@ModelAttribute("users") @Valid com.example.homework_1.models.Users users, BindingResult bindingResult){
+        if (bindingResult.hasErrors()){
+            return "add_users";
+        }
         daoUsers.addUsers(users);
         return "redirect:/users";
     }
@@ -46,7 +51,10 @@ public class Users {
     }
 
     @PostMapping("/users/edit/{id}")
-    public String edit_User(@ModelAttribute("edit_users") com.example.homework_1.models.Users users, @PathVariable("id") int id){
+    public String edit_User(@ModelAttribute("edit_users") @Valid com.example.homework_1.models.Users users, BindingResult bindingResult, @PathVariable("id") int id){
+        if (bindingResult.hasErrors()){
+            return "edit_users";
+        }
         daoUsers.updatePerson(id, users);
         return "redirect:/users";
     }

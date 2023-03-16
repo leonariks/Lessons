@@ -1,13 +1,29 @@
 package com.example.homework_1.models;
 
+import jakarta.validation.constraints.*;
+
 public class Users {
 
     private int id;
+
+    @NotEmpty(message="Фамилия не может быть пустой!")
+    @Size(min = 1, max = 25, message = "Фамилия должна быть в диапазоне от 1 до 20 символов!!")
     private String second_name;
+
+    @NotEmpty(message="Имя не может быть пустой!")
+    @Size(min = 1, max = 25, message = "Имя должна быть в диапазоне от 1 до 20 символов!")
     private String first_name;
     private String surname;
+
+    @Min(value = 18, message = "Возраст не может быть ниже 18 лет!")
     private int age;
+
+    @NotEmpty(message = "Email пользователя нге может быть пустым!")
+    @Email(message = "Вы ввели неверный email!")
     private String email;
+
+    @NotEmpty(message = "Номер телефона не может быть пустым!")
+    @Pattern(regexp = "^((\\+7|7|8)+([0-9]){10})$", message = "Вы ввели неверный номер телефона")
     private String telephone;
 
     public Users(String second_name, String first_name, String surname, int age, String email, String telephone) {

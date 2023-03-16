@@ -6,23 +6,51 @@
 
     <style>
 
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
-            margin: 0 auto;
         }
-        a{
+
+        a {
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
             color: black;
+            margin-top: 10px;
+            margin-left: 10px;
+            transition: .5s;
         }
 
+        a:hover{
+            color: darkblue;
+        }
+
+        .but{
+            margin-top: 20px;
+            border: 2px solid green;
+            border-radius: 15px;
+            background: green;
+            color: white;
+            padding: 10px;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        .but:hover{
+            background: darkgreen;
+            border: 2px solid darkgreen;
+        }
+
+        .container{
+            margin-top: 25px;
+        }
     </style>
 </head>
 <body>
-<div th:each="product:${product}">
-    <a th:href="@{/product/{id}(id=${product.getId()})}" th:text="${product.getName()}"></a>
-</div>
-<a href="/product/add">Добавление товара</a>
+    <div class="container" th:each="product:${product}">
+        <a th:href="@{/product/{id}(id=${product.getId()})}" th:text="${product.getName()}"></a>
+    </div>
+    <div class="container">
+        <a class="but" href="/product/add">Добавление товара</a>
+    </div>
 </body>
 </html>

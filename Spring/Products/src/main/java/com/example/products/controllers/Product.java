@@ -1,8 +1,10 @@
 package com.example.products.controllers;
 
 import com.example.products.dao.DaoProduct;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -46,7 +48,10 @@ public class Product {
 
     //Метод позволяет принять данные с формы и сохранить товар в лист
     @PostMapping("/product/add")
-    public String newProduct(@ModelAttribute("product") com.example.products.models.Product product) {
+    public String newProduct(@ModelAttribute("product") @Valid com.example.products.models.Product product, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()){
+            return "add_product";
+        }
         daoProduct.addProduct(product);
         return "redirect:/product";
     }
@@ -60,7 +65,10 @@ public class Product {
 
     //Метод позволяет принять редакутируемый объект с формы и обновить информацию о нём
     @PostMapping("/product/edit/{id}")
-    public String edit_Product(@ModelAttribute("edit_product") com.example.products.models.Product product, @PathVariable("id") int id) {
+    public String edit_Product(@ModelAttribute("edit_product") @Valid com.example.products.models.Product product,BindingResult bindingResult, @PathVariable("id") int id) {
+        if (bindingResult.hasErrors()){
+            return "edit_product";
+        }
         daoProduct.updatePerson(id, product);
         return "redirect:/product";
     }
