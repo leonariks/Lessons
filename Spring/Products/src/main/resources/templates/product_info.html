@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Информация о товаре</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+        }
+        p{
+            font-weight: bold;
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+    </style>
 </head>
 <body>
   <p th:text="'Товар № ' + ${product.getId()}"></p>

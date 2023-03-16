@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Список товаров</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            color: black;
+        }
+
+    </style>
 </head>
 <body>
 <div th:each="product:${product}">

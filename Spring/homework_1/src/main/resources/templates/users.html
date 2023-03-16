@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список пользователей</title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            color: black;
+            margin-top: 10px;
+            margin-left: 10px;
+            transition: .5s;
+        }
+
+        a:hover{
+            color: darkblue;
+        }
+
+        .but{
+            margin-top: 20px;
+            border: 2px solid green;
+            border-radius: 15px;
+            background: green;
+            color: white;
+            padding: 10px;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        .but:hover{
+            background: darkgreen;
+            border: 2px solid darkgreen;
+        }
+
+        div{
+            margin-top: 25px;
+        }
+
+    </style>
+</head>
+<body>
+<div th:each="users:${users}">
+    <a th:href="@{/users/{id}(id=${users.getId()})}" th:text="${users.getFirst_name()}"></a>
+</div>
+<div>
+    <a class="but" href="/users/add">Добавление пользователя</a>
+</div>
+</body>
+</html>
