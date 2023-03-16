@@ -1,33 +1,46 @@
 package com.example.homework_1.models;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
+@Entity(name = "user_site")
 public class Users {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotEmpty(message="Фамилия не может быть пустой!")
+    @NotEmpty(message = "Фамилия не может быть пустой!")
     @Size(min = 1, max = 25, message = "Фамилия должна быть в диапазоне от 1 до 20 символов!!")
+    @Column(name = "second_name", length = 30, nullable = false, columnDefinition = "text")
     private String second_name;
 
-    @NotEmpty(message="Имя не может быть пустой!")
+    @NotEmpty(message = "Имя не может быть пустой!")
     @Size(min = 1, max = 25, message = "Имя должна быть в диапазоне от 1 до 20 символов!")
+    @Column(name = "first_name", length = 25, nullable = false, columnDefinition = "text")
     private String first_name;
+
+    @Column(name = "surname", length = 25, nullable = true, columnDefinition = "text")
     private String surname;
 
     @Min(value = 18, message = "Возраст не может быть ниже 18 лет!")
+    @Column(name = "age", length = 25, nullable = false, columnDefinition = "int")
     private int age;
 
     @NotEmpty(message = "Email пользователя нге может быть пустым!")
     @Email(message = "Вы ввели неверный email!")
+    @Column(name = "email", length = 40, nullable = false, columnDefinition = "text", unique = true)
     private String email;
 
     @NotEmpty(message = "Номер телефона не может быть пустым!")
     @Pattern(regexp = "^((\\+7|7|8)+([0-9]){10})$", message = "Вы ввели неверный номер телефона")
+    @Column(name = "telephone", length = 12, nullable = false, columnDefinition = "text", unique = true)
     private String telephone;
 
+//    private int sum;
+
     public Users(String second_name, String first_name, String surname, int age, String email, String telephone) {
-        this.id=id;
+        this.id = id;
         this.second_name = second_name;
         this.first_name = first_name;
         this.surname = surname;
@@ -36,7 +49,7 @@ public class Users {
         this.telephone = telephone;
     }
 
-    public Users(Users users){
+    public Users(Users users) {
 
     }
 
@@ -98,5 +111,18 @@ public class Users {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", second_name='" + second_name + '\'' +
+                ", first_name='" + first_name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", telephone='" + telephone + '\'' +
+                '}';
     }
 }

@@ -45,13 +45,13 @@ public class Users {
     }
 
     @GetMapping("/users/edit/{id}")
-    public String editProduct(@PathVariable("id") int id, Model model){
+    public String editUser(@PathVariable("id") int id, Model model){
         model.addAttribute("edit_users", daoUsers.getUsersId(id));
         return "edit_users";
     }
 
     @PostMapping("/users/edit/{id}")
-    public String edit_User(@ModelAttribute("edit_users") @Valid com.example.homework_1.models.Users users, BindingResult bindingResult, @PathVariable("id") int id){
+    public String editUser(@ModelAttribute("edit_users") @Valid com.example.homework_1.models.Users users, BindingResult bindingResult, @PathVariable("id") int id){
         if (bindingResult.hasErrors()){
             return "edit_users";
         }

@@ -12,7 +12,7 @@ public class DaoUsers {
     private List<Users> user = new ArrayList<>();
 
 
-    public void addUsers(Users users){
+    public void addUsers(Users users) {
         user.add(users);
         users.setId(++id);
     }
@@ -21,11 +21,11 @@ public class DaoUsers {
         return user;
     }
 
-    public Users getUsersId(int id){
+    public Users getUsersId(int id) {
         return user.stream().filter(users -> users.getId() == id).findAny().orElse(null);
     }
 
-    public void updatePerson(int id, Users users){
+    public void updatePerson(int id, Users users) {
         Users usersUpdate = getUsersId(id);
         usersUpdate.setSecond_name(users.getSecond_name());
         usersUpdate.setFirst_name(users.getFirst_name());
@@ -35,7 +35,7 @@ public class DaoUsers {
         usersUpdate.setTelephone(usersUpdate.getTelephone());
     }
 
-    public void deleteUsers(int id){
-        user.removeIf(users -> users.getId()==id);
+    public void deleteUsers(int id) {
+        user.removeIf(users -> users.getId() == id);
     }
 }
