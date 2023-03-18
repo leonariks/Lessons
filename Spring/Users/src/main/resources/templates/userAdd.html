@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Добавление пользователей</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 80%;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 2px 10px green;
+        }
+
+        input{
+            margin: 2px;
+        }
+
+        input[type=text]:focus, [type=submit]:focus, input[type=number]:focus, select:focus {
+            outline: none;
+            border: 2px solid green;
+        }
+
+        input[type=submit] {
+            background: green;
+            margin-top: 10px;
+            font-weight: bold;
+            color: white;
+            border-radius: 20px;
+            padding: 10px;
+            border: none;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover{
+            background: darkgreen;
+            color: darkblue;
+        }
+    </style>
 </head>
 <body>
-<h3>Добавление пользователей</h3>
+<h1>Добавление пользователей</h1>
 <form th:method="POST" th:actioin="@{/user/add}" th:object="${user}">
     <label for="lastName">Введите фамилию: </label>
     <input type="text" th:field="*{lastName}" id="lastName">
@@ -30,6 +75,7 @@
     <label for="phoneNumber">Введите номер телефона: </label>
     <input type="text" th:field="*{phoneNumber}" id="phoneNumber">
                         <div style="color: red" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></div>
+    <br>
     <br>
     <input type="submit" value="Добавить">
 </form>

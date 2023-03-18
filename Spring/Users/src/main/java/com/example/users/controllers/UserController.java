@@ -78,7 +78,26 @@ public class UserController {
         return "redirect:/user";
     }
 
+    @GetMapping("/sortingAndSearching")
+    public String sortingAndSearching(){
+        return "sortingAndSearching";
+    }
 
 
+    @PostMapping("/sortingAndSearching")
+    public String sortingAndSearching(@RequestParam("sortingOrFilteringOption") String sortingOrFilteringOption,@RequestParam("optionSort") String optionSort, Model model){
+        if(sortingOrFilteringOption.equals("email")){
+            model.addAttribute("users", userService.getUserEmail(optionSort));
+        } else if (sortingOrFilteringOption.equals("phoneNumber")) {
+            model.addAttribute("users", userService.getUserPhoneNumber(optionSort));
+        } else if (sortingOrFilteringOption.equals("lastName")) {
+            model.addAttribute("users", userService.getUserLastNameOrderByAge(optionSort));
+        } else if (sortingOrFilteringOption.equals("lastNameDesc")) {
+            model.addAttribute("users", userService.getUserLastNameStartingWith(optionSort));
+        } else if (sortingOrFilteringOption.equals("lastNameStart")) {
+            model.addAttribute("users", userService.getUserLastNameStartingWith(optionSort));
+        }
+        return "sortingAndSearching";
+    }
 
 }

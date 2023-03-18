@@ -3,17 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Информация о пользователе</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            box-shadow: 0px 1px 10px green;
+            padding: 20px;
+            border: 2px solid green;
+            border-radius: 10px;
+            width: 500px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            color: black;
+            margin-left: 10px;
+            transition: .5s;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        .but {
+            border: 2px solid green;
+            border-radius: 15px;
+            background: green;
+            color: white;
+            padding: 10px;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        .but:hover {
+            background: darkgreen;
+            border: 2px solid darkgreen;
+        }
+    </style>
 </head>
 <body>
-<h3>Информация о пользователе</h3>
-<p th:text="'Фамилия: ' + ${user.getLastName()}"></p>
-<p th:text="'Имя: ' + ${user.getFirstName()}"></p>
-<p th:text="'Отчество: ' + ${user.getPatronymic()}"></p>
-<p th:text="'Возраст: ' + ${user.getAge()}"></p>
-<p th:text="'Email: ' + ${user.getEmail()}"></p>
-<p th:text="'Номер телефона: ' + ${user.getPhoneNumber()}"></p>
-<hr>
-<a th:href="@{edit/{id}(id=${user.getId()})}">Редактировать пользователя</a>
-<a th:href="@{delete/{id}(id=${user.getId()})}">Удалить пользователя</a>
+
+        <h1>Информация о пользователе</h1>
+        <div class="container">
+        <p th:text="'Фамилия: ' + ${user.getLastName()}"></p>
+        <p th:text="'Имя: ' + ${user.getFirstName()}"></p>
+        <p th:text="'Отчество: ' + ${user.getPatronymic()}"></p>
+        <p th:text="'Возраст: ' + ${user.getAge()}"></p>
+        <p th:text="'Email: ' + ${user.getEmail()}"></p>
+        <p th:text="'Номер телефона: ' + ${user.getPhoneNumber()}"></p>
+    </div>
+        <a class="but" th:href="@{edit/{id}(id=${user.getId()})}">Редактировать пользователя</a>
+        <a class="but" th:href="@{delete/{id}(id=${user.getId()})}">Удалить пользователя</a>
 </body>
 </html>

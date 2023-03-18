@@ -48,7 +48,28 @@ public class UserService {
     }
 
     // Данный метод позволяет удалить пользователя по id
+    @Transactional
     public void delete(int id){
         userRepository.deleteById(id);
+    }
+
+    public List<User> getUserEmail(String email){
+        return userRepository.findByEmail(email);
+    }
+
+    public List<User> getUserPhoneNumber(String phoneNumber){
+        return userRepository.findByPhoneNumber(phoneNumber);
+    }
+
+    public List<User> getUserLastNameOrderByAge(String lastname){
+        return  userRepository.findByLastNameOrderByAge(lastname);
+    }
+
+    public List<User> getUserLastNameStartingWith(String startWith){
+        return userRepository.findByLastNameStartingWith(startWith);
+    }
+
+    public List<User> findByLastNameOrderByAgeDesc(String lastName){
+        return userRepository.findByLastNameOrderByAgeDesc(lastName);
     }
 }

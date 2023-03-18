@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Пользователи</title>
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            margin-left: 10px;
+            transition: .5s;
+            border: 1px solid green;
+            border-radius: 15px;
+            background: green;
+            padding: 10px;
+            transition: .5s;
+        }
+
+        a:hover{
+            color: darkblue;
+        }
+
+        .but{
+            margin-top: 20px;
+            border: 2px solid green;
+            border-radius: 15px;
+            background: green;
+            color: white;
+            padding: 10px;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        .but:hover{
+            background: darkgreen;
+            border: 2px solid darkgreen;
+        }
+
+        .container{
+            margin-top: 45px;
+        }
+    </style>
 </head>
 <body>
-<h3>Cписок пользователей</h3>
-<div th:each="user : ${user}">
-    <a th:href="@{/user/{id}(id=${user.getId()})}" th:text="${user.getLastName()}  + ' '+ ${user.getFirstName()} + ' ' +  ${user.getPatronymic()}"></a>
-</div>
-<hr>
-<a href="/user/add">Добавление пользователя</a>
+    <h1>Cписок пользователей</h1>
+    <div class="container" th:each="user : ${user}">
+        <a th:href="@{/user/{id}(id=${user.getId()})}" th:text="${user.getLastName()}  + ' '+ ${user.getFirstName()} + ' ' +  ${user.getPatronymic()}"></a>
+    </div>
+    <div class="container">
+     <a class="but" href="/user/add">Добавление пользователя</a> <br><br><br><br>
+     <a class="but" href="/user/sortingAndSearching">Поиск, сортировка и фильтрация</a>
+    </div>
 </body>
 </html>
