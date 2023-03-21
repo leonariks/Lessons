@@ -1,12 +1,14 @@
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
-import Slider from './components/Slider';
-import CardItem from './components/cart/CartItem';
 import Footer from './components/Footer';
+import Favorites from './components/Favorites';
 import "./App.css";
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import Home from './components/Home';
+import {Route,Routes,BrowserRouter as Router} from 'react-router-dom';
+import Description from './components/Description';
 
 function App() { 
 
@@ -19,16 +21,28 @@ function App() {
 
       setTyrs(tyrsData.data)
     }
+    axiosData();
 },[])
 
   return (
     <div>
-      <Header></Header>
-      <Slider></Slider>
-      <CardItem item={tyrs}/>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path='/favorites' element={
+            <Favorites />
+          }/>
+          <Route path='/' element={
+            <Home
+            item={tyrs}/>
+          }/>
+          <Route path='/description' element={
+            <Description/>
+          }/>
+        </Routes>
+      </Router>
       <Footer/>
     </div>
-   
   );
 }
 

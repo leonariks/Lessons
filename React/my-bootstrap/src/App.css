@@ -40,3 +40,14 @@
 .row{
   --bs-gutter-x: 0rem;
 }
+
+a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: .4s;
+}
+
+a:hover{
+  color: #969696;
+}
