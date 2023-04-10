@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,6 +7,7 @@ import "./App.css";
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 import Home from './components/Home';
+import Form from './components/Form';
 import {Route,Routes,BrowserRouter as Router} from 'react-router-dom';
 import Description from './components/Description';
 
@@ -38,6 +39,9 @@ function App() {
           }/>
           <Route path='/description' element={
             <Description/>
+          }/>
+          <Route path='/form' element={
+            <Form/>
           }/>
         </Routes>
       </Router>

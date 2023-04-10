@@ -9,7 +9,7 @@
 <body>
   <script>
 
-/*
+
 
 //Задача 1 ===================================
 
@@ -40,46 +40,45 @@ let n = prompt("Размер массива N: ");
       result = 0;
     }
 
-  */
+ 
 
   //Задача 2 ===================================
 
-  let n = prompt("Размер массива N: ");
-    let m = new Array();
-    for(let i = 0; i < n; i++){
-      m[i] = new Array();
-      for(let j = 0; j < n; j++){
-        m[i][j] = prompt(i + " " + j);
+  let n2 = prompt("Размер массива N: ");
+    let m2 = new Array();
+    for(let i = 0; i < n2; i++){
+      m2[i] = new Array();
+      for(let j = 0; j < n2; j++){
+        m2[i][j] = prompt(i + " " + j);
       }
     }
 
     for(let i = 0; i < n; i++){
       for(let j = 0; j < n; j++){
-        if(i+j == n-1){
-          m[i][j] = 0;
+        if(i+j == n2-1){
+          m2[i][j] = 0;
         }
-        document.write(m[i][j] + "  ");
+        document.write(m2[i][j] + "  ");
       }
       document.write("<br>");
     }
 
 
-/*
 //Задача 3 ===================================
 
 
-  let n = prompt("Размер массива N: ");
-    let m = new Array();
-    for(let i = 0; i < n; i++){
-      m[i] = new Array();
-      for(let j = 0; j < n; j++){
-        m[i][j] = prompt(i + " " + j);
+  let n3 = prompt("Размер массива N: ");
+    let m3 = new Array();
+    for(let i = 0; i < n3; i++){
+      m3[i] = new Array();
+      for(let j = 0; j < n3; j++){
+        m3[i][j] = prompt(i + " " + j);
       }
     }
 
-    for(let i = n-1; i >= 0; i--){
-      for(let j = 0; j < n; j++){
-          document.write(m[i][j] + "  ");
+    for(let i = n3-1; i >= 0; i--){
+      for(let j = 0; j < n3; j++){
+          document.write(m3[i][j] + "  ");
       }
       document.write("<br>");
     }
@@ -89,26 +88,26 @@ let n = prompt("Размер массива N: ");
      //Задача 4 ===================================
 
 
-     let n = prompt("Размер массива N: ");
-    let m = new Array();
-    for(let i = 0; i < n; i++){
-      m[i] = new Array();
-      for(let j = 0; j < n; j++){
-        m[i][j] = prompt(i + " " + j);
+     let n4 = prompt("Размер массива N: ");
+    let m4 = new Array();
+    for(let i = 0; i < n4; i++){
+      m4[i] = new Array();
+      for(let j = 0; j < n4; j++){
+        m4[i][j] = prompt(i + " " + j);
       }
     }
 
-    for(let i = 0; i < n; i++){
-      for(let j = 0; j < n; j++){
-          document.write(m[i][j] + "  ");
+    for(let i = 0; i < n4; i++){
+      for(let j = 0; j < n4; j++){
+          document.write(m4[i][j] + "  ");
       }
       document.write("<br>");
     }
     document.write("<br>");
 
-    for(let i = n-1; i >= 0; i--){
-      for(let j = 0; j < n; j++){
-          document.write(m[j][i] + "  ");
+    for(let i = n4-1; i >= 0; i--){
+      for(let j = 0; j < n4; j++){
+          document.write(m4[j][i] + "  ");
       }
       document.write("<br>");
     }
@@ -118,18 +117,18 @@ let n = prompt("Размер массива N: ");
     //Задача 5 ===================================
 
 
-  let n = prompt("Размер массива N: ");
-    let m = new Array();
-    for(let i = 0; i < n; i++){
-      m[i] = new Array();
-      for(let j = 0; j < n; j++){
-        m[i][j] = prompt(i + " " + j);
+  let n5 = prompt("Размер массива N: ");
+    let m5 = new Array();
+    for(let i = 0; i < n5; i++){
+      m5[i] = new Array();
+      for(let j = 0; j < n5; j++){
+        m5[i][j] = prompt(i + " " + j);
       }
     }
 
-    for(let i = 0; i < n; i++){
-      for(let j = 0; j < n; j++){
-          document.write(m[i][j] + "  ");
+    for(let i = 0; i < n5; i++){
+      for(let j = 0; j < n5; j++){
+          document.write(m5[i][j] + "  ");
       }
       document.write("<br>");
     }
@@ -138,23 +137,23 @@ let n = prompt("Размер массива N: ");
     
     flag = false;
 
-    for(let i = n-1; i >= 0; i--){
+    for(let i = n5-1; i >= 0; i--){
       if(flag){
-        for(let j = 0; j < n; j++){
-          document.write(m[i][j] + "  ");
+        for(let j = 0; j < n5; j++){
+          document.write(m5[i][j] + "  ");
         }
         flag = false;
       }
       else{
-        for(let j = n-1; j >= 0; j--){
-          document.write(m[i][j] + "  ");
+        for(let j = n5-1; j >= 0; j--){
+          document.write(m5[i][j] + "  ");
         }
         flag = true;
       }  
       document.write("<br>");
     }
 
-    */
+
 
   </script>
 </body>
