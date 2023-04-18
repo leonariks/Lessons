@@ -40,7 +40,9 @@ public class User {
 //    @Transient
 //    private int sum;
 
-    public User(int id, String lastName, String firstName, String patronymic, int age, String email, String phoneNumber) {
+    private String fileName;
+
+    public User(int id, String lastName, String firstName, String patronymic, int age, String email, String phoneNumber, String fileName) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -48,6 +50,7 @@ public class User {
         this.age = age;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.fileName = fileName;
     }
 
     public User() {
@@ -107,6 +110,14 @@ public class User {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     @Override
