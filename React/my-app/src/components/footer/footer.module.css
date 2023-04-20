@@ -1,0 +1,21 @@
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgb(224, 114, 10);
+    padding: 30px;
+    justify-items: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   footer p{
+     color: white;
+    font-weight: 700;
+   }
+   
+   footer .logo{
+     color: white;
+     font-size: 40px;
+     font-weight: bold;
+   }
