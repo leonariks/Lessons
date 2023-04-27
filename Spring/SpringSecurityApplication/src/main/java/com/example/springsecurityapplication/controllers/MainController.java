@@ -49,27 +49,18 @@ public class MainController {
 
     @GetMapping("/person account")
     public String index(Model model){
-        // Получаем объект аутентификации -> с помощью SpringContextHolder обращаемся к контексту и на нем вызываем метод аутентификации. Из сессии текущего пользователя получаем объект, который был положен в данную сессию после аутентификации пользователя
+
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         PersonDetails personDetails = (PersonDetails) authentication.getPrincipal();
         String role = personDetails.getPerson().getRole();
         if(role.equals("ROLE_ADMIN")){
             return "redirect:/admin";
         }
-//        System.out.println(personDetails.getPerson());
-//        System.out.println("ID пользователя: " + personDetails.getPerson().getId());
-//        System.out.println("Логин пользователя: " + personDetails.getPerson().getLogin());
-//        System.out.println("Пароль пользователя: " + personDetails.getPerson().getPassword());
-//        System.out.println(personDetails);
+
         model.addAttribute("products", productService.getAllProduct());
         return "/user/index";
     }
 
-    //    @GetMapping("/registration")
-//    public String registration(Model model){
-//        model.addAttribute("person", new Person());
-//        return "registration";
-//    }
 
     @GetMapping("/registration")
     public String registration(@ModelAttribute("person") Person person){
@@ -134,7 +125,6 @@ public class MainController {
         model.addAttribute("value_search", search);
         model.addAttribute("value_price_ot", ot);
         model.addAttribute("value_price_do", Do);
-
         return "/product/product";
 
     }
@@ -159,11 +149,9 @@ public class MainController {
         List<Cart> cartList = cartRepository.findByPersonId(id_person);
         List<Product> productList = new ArrayList<>();
 
-
         for (Cart cart: cartList) {
             productList.add(productService.getProductId(cart.getProductId()));
         }
-
 
         float price = 0;
         for (Product product: productList) {
@@ -227,8 +215,8 @@ public class MainController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         PersonDetails personDetails = (PersonDetails) authentication.getPrincipal();
         List<Order> orderList = orderRepository.findByPerson(personDetails.getPerson());
-         model.addAttribute("orders", orderList);
-         return "/user/orders";
+        model.addAttribute("orders", orderList);
+        return "/user/orders";
     }
 
 

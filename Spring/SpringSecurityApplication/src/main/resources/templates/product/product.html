@@ -54,8 +54,8 @@
     <img th:src="'/img/' + ${product.imageList[0].getFileName()}" width="300px">
     <br>
     <a th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}"></a>
-        <p th:text="'Цена: ' + ${product.getPrice()}"></p>
-        <hr>
+    <p th:text="'Цена: ' + ${product.getPrice()}"></p>
+    <hr>
 </div>
 </body>
 </html>
